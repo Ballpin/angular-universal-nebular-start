@@ -5,6 +5,8 @@ import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
+import { AppRoutingModule } from './app-routing.module';
+import { NbThemeModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -13,12 +15,10 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full'},
-      { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-      { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
-    ]),
+    AppRoutingModule,
     TransferHttpCacheModule,
+    // this will enable the default theme, you can change this by passing `{ name: 'cosmic' }` to enable the dark theme
+    NbThemeModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
