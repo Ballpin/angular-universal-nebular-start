@@ -3,8 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-pages',
   template: `
-    <h1>Hi from Page</h1>
+      <nb-layout>
+          <nb-layout-header fixed>Company Name</nb-layout-header>
+
+          <nb-sidebar>Sidebar Content</nb-sidebar>
+
+          <nb-layout-column>Page Content</nb-layout-column>
+      </nb-layout>
   `
 })
 
-export class PagesComponent {}
+export class PagesComponent {
+}

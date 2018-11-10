@@ -28,7 +28,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/@nebular/theme/styles/prebuilt/default.css",
+              "node_modules/@nebular/theme/styles/prebuilt/corporate.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -78,7 +80,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "assets": [
               {
@@ -160,7 +162,7 @@
       "inlineStyle": true,
       "inlineTemplate": true,
       "prefix": "app",
-      "styleext": "css"
+      "styleext": "scss"
     },
     "@schematics/angular:directive": {
       "spec": false,

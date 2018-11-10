@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,8 +16,8 @@ import { NbThemeModule } from '@nebular/theme';
     BrowserModule.withServerTransition({appId: 'my-app'}),
     AppRoutingModule,
     TransferHttpCacheModule,
-    // this will enable the default theme, you can change this by passing `{ name: 'cosmic' }` to enable the dark theme
-    NbThemeModule.forRoot(),
+    // this will enable the default theme, you can change this by passing `` to enable the dark theme
+    NbThemeModule.forRoot({ name: 'corporate' }),
   ],
   providers: [],
   bootstrap: [AppComponent]
